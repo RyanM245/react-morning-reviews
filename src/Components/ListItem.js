@@ -1,7 +1,7 @@
 import React from 'react'
 
 const ListItem = (props) => {
-    const {movie} = props
+    const {movie, deleteMovie} = props
 
     return <div className = "List-Item"> 
         <img alt={movie.title} className = "movie-poster" src = {movie.posterImg}/>
@@ -10,6 +10,7 @@ const ListItem = (props) => {
         <p>{movie.year}</p>
 
         </div>
+        <p className = "delete-button" onClick = {() => deleteMovie(movie.id)}>X</p>
      </div>
 }
 
